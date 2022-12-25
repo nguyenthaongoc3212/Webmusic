@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #1abc9c;
+        font-family: Arial, sans-serif;
+        display: grid;
+        height: 100%;
+        place-items: center;
+      }
+
+      a {
+        color: crimson;
+        font-weight: bolder;
+        font-size: larger;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .register {
+        width: 500px;
+        padding: 16px;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 5px;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+        border: 1px solid;
+        border-radius: 10px;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus,
+      input[type="email"]:focus {
+        background-color: #ddd;
+        /* outline: none; */
+      }
+
+      .submit {
+        background-color: blue;
+        color: whitesmoke;
+        padding: 15px 18px;
+        margin: 8px 0;
+        border: 2px solid blue;
+        border-radius: 12px;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+        font-size: medium;
+      }
+
+      .submit:hover {
+        opacity: 1;
+      }
+
+      .login {
+        background-color: #ffffff;
+        text-align: center;
+      }
+
+      h1,
+      p {
+        text-align: center;
+      }
+      h1 {
+        line-height: 50px;
+        border-radius: 5px 5px 0 0;
+        color: olive;
+        font-size: 50px;
+        font-weight: 600;
+      }
+      p {
+        color: mediumblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="" onsubmit="validate()">
+      <div class="register">
+        <h1>Đăng ký</h1>
+        <p>Vui lòng điền thông tin để đăng ký</p>
+        <hr />
+        <label for="username"><b>Tên đăng nhập</b></label>
+        <input
+          type="text"
+          placeholder="Họ và tên"
+          name="username"
+          id="username"
+        />
+        <label for="password"><b>Mật khẩu</b></label>
+        <input
+          type="password"
+          placeholder="******"
+          name="password"
+          id="password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+          required
+        />
+        <label for="password-repeat"><b>Nhập lại mật khẩu</b></label>
+        <input
+          type="password"
+          placeholder="******"
+          name="password-repeat"
+          id="password-repeat"
+        />
+        <label for="email"><b>Nhập Email</b></label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Abc@gmai.com"
+        /><br />
+        <hr />
+        <p>
+          Để tạo tài khoản vui lòng đồng ý với điều khoản của chúng tôi
+          <a href="#">Terms & Privacy</a>.
+        </p>
+        <button type="submit" class="submit">Đăng ký</button>
+      </div>
+
+      <div class="register login">
+        <p>Bạn đã có tài khoản rồi? <a href="SignIn.html">Đăng nhập</a>.</p>
+      </div>
+    </form>
+    <script>
+      function validate() {
+        var email = document.getElementById("email").value;
+        var u = document.getElementById("username").value;
+        var p1 = document.getElementById("password").value;
+        var p2 = document.getElementById("password-repeat").value;
+
+        if (u == "") {
+          alert("Vui lòng nhập tên");
+          return false;
+        }
+        if (p1 == "") {
+          alert("Vui lòng nhập mật khẩu");
+          return false;
+        }
+        if (p2 == "") {
+          alert("Vui lòng nhập lại mật khẩu");
+          return false;
+        }
+        if(p1 != p2){
+          alert("Mật khẩu không chính xác ")
+        }
+
+        if (localStorage.getItem(u.toString())) {
+          alert("Tài khoản đã tồn tại");
+          return false;
+        }
+        var save = [u, p1, email];
+        localStorage.setItem(u.toString(), JSON.stringify(save));
+        alert("Đăng ký thành công");
+        u = "";
+        p1 = "";
+        p2 = "";
+        return true;
+      }
+    </script>
+  </body>
+</html>
