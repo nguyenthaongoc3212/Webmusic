@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lofi chill</title>
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+
+
+    <script src="https://kit.fontawesome.com/860e7596f3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
 <body>
 <div id="container">
-    <img class="background" src="https://animesher.com/orig/1/188/1888/18889/animesher.com_anime-flower-gif-pastel-1888908.gif" alt=""> -->
+     <img class="background" src="https://animesher.com/orig/1/188/1888/18889/animesher.com_anime-flower-gif-pastel-1888908.gif" alt=""> --> -->
   <div id="navbar ">
     <a class="navbar-logo">
     <img class="logo" src="https://app.lofi.co/static/media/logo.0cbf9e63b4a021661126.gif" alt="logo">
@@ -21,24 +28,45 @@
     </ul class="nav-navbar" >
     </div>
 </div>
-<div class="music">
-  <div class="music-thumb">
-    <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_webp/cover/9/f/c/1/9fc1b248aca6eca9940bd448a07682d9.jpg" alt="" />
-  </div>
-  <h2 class="music-name">Hoa Nhip Giang Sinh</h2>
-  <input type="range" name="range" id="range" class="range" />
-  <audio src="https://zingmp3.vn/bai-hat/Hoa-Nhip-Giang-Sinh-MIN/ZWAFF096.html" id="song"></audio>
-<div class="controls">
-    <ion-icon name="shuffle-outline" class="shuffle"></ion-icon>
-    <ion-icon name="play-back-outline" class="back"></ion-icon>
-    <ion-icon name="play-outline" class="play"></ion-icon> 
-    <ion-icon name="play-forward-outline" class="forward" ></ion-icon> 
-    <ion-icon name="repeat-outline" class="repeat"></ion-icon>
+<div class="audio-container">
+
+    <div class="audio-img-wrapper">
+        <div class="audio-img">
+            <img src="" alt="" class="img">
+        </div>
+
+<h2 class="audio-title">Title of audio</h2>
+<img src="" class="img" alt="">
+ <h6 class="audio-singer">Singer name</h6>
+ <div class="audio-progress">
+    <div class="progress">
+        <div class="progress-bar"></div>
+        <div class="progress-head"></div>
+        <div class="current-time">0:00</div>
+            <div class="duration">0:00</div>
+    </div>
+ </div>
+ 
+    <div class="audio-btns">
+        
+        <button class="btn skip-back">
+            <i class="fa-solid fa-backward-step"></i>
+        </button>
+
+        <button class="btn play">
+            <span> <i class="fa-solid fa-play"></i> </span>
+        </button>
+
+        <button class="btn skip-forward">
+            <i class="fa-solid fa-forward-step"></i>
+        </button>
+
+    <audio src="/Music/BaoTienMotMoBinhYen-14CasperBon-7463948.mp3"></audio>
+    </div>
+<script src="/js/main.js"></script>
+ </div>
 </div>
-
-
 <script src="/js/index.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>

@@ -4,7 +4,6 @@ body {
     box-sizing: border-box;
     font-family: sans-serif;
     scroll-behavior: smooth;
-
   }
   #container {
     display: block;
@@ -17,7 +16,7 @@ body {
   left: 0px; 
   object-fit: cover;
    z-index: 0;
-}
+} 
 .logo{
   cursor: pointer;
   border-style: none;
@@ -47,60 +46,32 @@ body {
   line-height: 40px;
   display: block
 }
+
 h2 {
-  color:red;
-  position: absolute;
-  margin-top: 560px;
-  margin-left: 120px;
+  margin-top: 320px;
+  margin-left: 150px;
   font-size: 20px;
-  font-family: "Brush Script MT", cursive;
-  font-size: 30px;
-   font-style: normal; 
-  font-variant: normal; 
-  font-weight: 700;
-   line-height: 26.4px; 
+  color:blue;
+  font-family: Rubik Bubbles;
+  position: absolute;
 }
 
 h6 {
-  font-size: 20px;
+  font-size: 15px;
+  margin-top: 370px;
   font-weight: 400;
-  color:dodgerblue;
+  color:red;
+  font-family: Sevillana;
+  margin-left: 150px;
   position: absolute;
-  margin-top: 600px;
-  margin-left: 120px;
-  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
 }
-.controls {
-  display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 0 50px;
- }
-.shuffle,
-.back,
-.forward,
-.repeat{
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  color: blue;
- margin-top: -100px;
-}
-.play{
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-  color: blue;
-  margin-top: -100px;
-}
+
 .audio-progress {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 30%;
-  margin-top: 610px;
-  margin-left: 530px;
+  width: 40%;
+  margin-top: 330px;
+  margin-left: 500px;
 }
 
 .progress {
@@ -108,48 +79,99 @@ h6 {
   margin-bottom: 0.8rem;
   text-align: center;
   background-color: #3d3a4b;
-  height: 70%;
+  height: 0.4rem;
   border-radius: 0.8rem;
   cursor: pointer;
   position: relative;
-
 }
 
 .progress-head {
   position: absolute;
-  background-color: #fafafa;
-   height: 1.2rem;
+  background-color: #1E90FF;
+  height: 1.2rem;
   width: 1.2rem;
   top: 0;
   left: 0;
   transform: translate(-50%, -32%);
   border-radius: 100%;
   z-index: 2;
-  box-shadow: 0 0 0 3px #aaabf8;
+  box-shadow: 0 0 0 3px white;
 }
 
 .progress-bar {
-  background-color: #fff;
-  position: absolute;
+  background-color:#1E90FF;
+  height: 100%;
+  position: relative;
   width: 0%;
   border-radius: 0.8rem;
-  height: 100%;
 }
 
 .current-time {
-margin-top: -4px;
-margin-left: -60px;
   position: absolute;
 }
 
 .duration {
- margin-top: -4px;
- margin-left: 465px;
+  margin-left: 560px;
   position: absolute;
 }
-.img{
+
+.audio-btns {
+  width: 300px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 660px;
   position: absolute;
-  width: 5%;
-  margin-top: 550px;
-  margin-left: 10px;
+margin-top: 280px;
 }
+
+.btn {
+  cursor: pointer;
+  border: unset;
+  box-shadow: unset;
+  background-color: unset;
+  font-size: 1.4rem;
+  color:black;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play {
+  background: linear-gradient(to right, #425ef0, #7854fb);
+  text-align: center;
+  border-radius: 100%;
+  padding: 1rem 1.2rem;
+  
+}
+.img {
+  height: 100%;
+  width: 100%;
+}
+
+.audio-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+
+.audio-img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-top: 300px;
+}
+.audio-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+
+}
+.audio-img img {
+  border-radius: 100%;
+  
+}
+
